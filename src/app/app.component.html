@@ -1,0 +1,46 @@
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-pink scrolling-navbar" [containerInside]="false">
+  <logo>
+    <a class="logo navbar-brand" href="#">
+      <strong>Dhanai Fruits Marts</strong>
+    </a>
+  </logo>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" [routerLink]="['/home']">Home
+        </a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" [routerLink]="['/about']">About</a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link">Pricing</a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav-flex-icons">
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+
+
+<router-outlet>
+
+</router-outlet>
