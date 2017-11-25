@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { MDBBootstrapModule } from './typescripts/free';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
-
+import { PanelModule } from 'primeng/primeng';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +19,7 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule,
+    BrowserModule, AppRoutingModule, PanelModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
