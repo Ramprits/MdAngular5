@@ -6,20 +6,24 @@ import { HttpModule } from '@angular/http';
 import { MDBBootstrapModule } from './typescripts/free';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
-import { PanelModule } from 'primeng/primeng';
+import { PanelModule, DataTableModule, ButtonModule, SplitButtonModule } from 'primeng/primeng';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './contact/contact.component';
+import { CustomerComponent } from './customer/customer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomerService } from './customer/customer.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    CustomerComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule, PanelModule,
+    BrowserModule, HttpClientModule, AppRoutingModule, SplitButtonModule, PanelModule, DataTableModule, ButtonModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
@@ -30,7 +34,7 @@ import { ContactComponent } from './contact/contact.component';
       apiKey: 'Your_api_key'
     })
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

@@ -1,0 +1,19 @@
+<div class="container">
+  <main class="py-5">
+    <p-panel>
+      <p-header>
+        <div class="ui-helper-clearfix">
+          <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Customer list</span>
+          <p-splitButton [style]="{'float':'right'}" label="Data List" (click)="toggle()"></p-splitButton>
+        </div>
+      </p-header>
+      <p-dataTable [value]="customers" [loading]="loading" [responsive]="true" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]"
+        [stacked]="stacked">
+        <p-column field="companyName" header="Company Name" [sortable]="true"></p-column>
+        <p-column field="contactName" header="Contact Name" [sortable]="true"></p-column>
+        <p-column field="contactTitle" header="Contact Title" [sortable]="true"></p-column>
+        <p-column field="address" header="Address" [sortable]="true"></p-column>
+      </p-dataTable>
+    </p-panel>
+  </main>
+</div>

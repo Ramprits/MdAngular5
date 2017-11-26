@@ -1,3 +1,4 @@
+<span class="glyphicon glyphicon-refresh glyphicon-spin spinner" *ngIf="!loading"></span>
 <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-pink scrolling-navbar" [containerInside]="false">
   <logo>
     <a class="logo navbar-brand" href="#">
@@ -19,6 +20,9 @@
       <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/contact']">Contact</a>
       </li>
+      <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" [routerLink]="['/customer']">Customer</a>
+      </li>
     </ul>
     <ul class="navbar-nav nav-flex-icons">
       <li class="nav-item waves-light" mdbRippleRadius routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
@@ -39,8 +43,6 @@
     </ul>
   </links>
 </mdb-navbar>
-
-
+<i class="fa fa-home"></i>
 <router-outlet>
-
 </router-outlet>
